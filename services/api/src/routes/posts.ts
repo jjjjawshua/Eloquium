@@ -16,7 +16,7 @@ const postRoutes: FastifyPluginAsync = async (app) => {
   });
 
   // Get single post by slug
-  app.get("/:username/:slug", async (request, _reply) => {
+  app.get("/:username/:slug", async (request, reply) => {
     const { username, slug } = request.params as Record<string, string>;
     const post = await prisma.post.findFirst({
       where: { slug, author: { username }, published: true },

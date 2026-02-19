@@ -2,7 +2,7 @@ import { FastifyPluginAsync } from "fastify";
 import { prisma } from "../index";
 
 const creatorRoutes: FastifyPluginAsync = async (app) => {
-  app.get("/:username", async (request, _reply) => {
+  app.get("/:username", async (request, reply) => {
     const { username } = request.params as Record<string, string>;
     const creator = await prisma.user.findUnique({
       where: { username },
