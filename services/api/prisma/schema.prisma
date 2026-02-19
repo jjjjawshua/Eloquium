@@ -1,0 +1,194 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  passwordHash  String?
+  name          String
+  username      String    @unique
+  avatar        String?
+  bio           String?
+  tagline       String?
+  coverImage    String?
+  customDomain  String?
+  tier          String    @default("starter") // starter | creator | pro
+  stripeAccountId String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  posts         Post[]
+  vlogs         Vlog[]
+  discussions   Discussion[]
+  comments      Comment[]
+  likes         Like[]
+  subscriptionsAsSubscriber Subscription[] @relation("subscriber")
+  subscriptionsAsCreator    Subscription[] @relation("creator")
+  paymentsAsUser   Payment[] @relation("payer")
+  paymentsAsCreator Payment[] @relation("payee")
+
+  @@index([username])
+  @@index([email])
+}
+
+model Post {
+  id          String    @id @default(cuid())
+  title       String
+  slug        String
+  content     Json
+  excerpt     String?
+  coverImage  String?
+  published   Boolean   @default(false)
+  isPaid      Boolean   @default(false)
+  publishedAt DateTime?
+  readTime    Int       @default(0) // minutes
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  author      User      @relation(fields: [authorId], references: [id])
+  authorId    String
+  comments    Comment[]
+  likes       Like[]
+  tags        Tag[]     @relation("PostTags")
+
+  @@unique([authorId, slug])
+  @@index([publishedAt])
+  @@index([authorId])
+}
+
+model Vlog {
+  id           String    @id @default(cuid())
+  title        String
+  videoUrl     String
+  thumbnailUrl String?
+  duration     Int       // seconds, max 60
+  captions     Json?
+  published    Boolean   @default(false)
+  publishedAt  DateTime?
+  createdAt    DateTime  @default(now())
+
+  author       User      @relation(fields: [authorId], references: [id])
+  authorId     String
+  comments     Comment[]
+  likes        Like[]
+
+  @@index([authorId])
+}
+
+model Discussion {
+  id        String   @id @default(cuid())
+  title     String
+  topic     String
+  isPinned  Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  creator   User     @relation(fields: [creatorId], references: [id])
+  creatorId String
+  threads   Thread[]
+
+  @@index([creatorId])
+}
+
+model Thread {
+  id           String   @id @default(cuid())
+  content      String
+  createdAt    DateTime @default(now())
+
+  discussion   Discussion @relation(fields: [discussionId], references: [id])
+  discussionId String
+  author       Comment[]
+  replies      Reply[]
+
+  @@index([discussionId])
+}
+
+model Reply {
+  id        String   @id @default(cuid())
+  content   String
+  parentId  String?
+  createdAt DateTime @default(now())
+
+  thread    Thread   @relation(fields: [threadId], references: [id])
+  threadId  String
+
+  @@index([threadId])
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  content   String
+  createdAt DateTime @default(now())
+
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  String
+  post      Post?    @relation(fields: [postId], references: [id])
+  postId    String?
+  vlog      Vlog?    @relation(fields: [vlogId], references: [id])
+  vlogId    String?
+  thread    Thread?  @relation(fields: [threadId], references: [id])
+  threadId  String?
+
+  @@index([postId])
+  @@index([vlogId])
+}
+
+model Like {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+  post      Post?    @relation(fields: [postId], references: [id])
+  postId    String?
+  vlog      Vlog?    @relation(fields: [vlogId], references: [id])
+  vlogId    String?
+
+  @@unique([userId, postId])
+  @@unique([userId, vlogId])
+}
+
+model Subscription {
+  id               String   @id @default(cuid())
+  tier             String   @default("free") // free | paid
+  price            Int?     // cents
+  stripeSubId      String?
+  active           Boolean  @default(true)
+  createdAt        DateTime @default(now())
+  canceledAt       DateTime?
+
+  subscriber       User     @relation("subscriber", fields: [subscriberId], references: [id])
+  subscriberId     String
+  creator          User     @relation("creator", fields: [creatorId], references: [id])
+  creatorId        String
+
+  @@unique([subscriberId, creatorId])
+}
+
+model Payment {
+  id              String   @id @default(cuid())
+  type            String   // subscription | tip | micropayment | bundle
+  amount          Int      // cents
+  platformFee     Int      // cents
+  stripePaymentId String
+  createdAt       DateTime @default(now())
+
+  user            User     @relation("payer", fields: [userId], references: [id])
+  userId          String
+  creator         User     @relation("payee", fields: [creatorId], references: [id])
+  creatorId       String
+
+  @@index([userId])
+  @@index([creatorId])
+}
+
+model Tag {
+  id    String @id @default(cuid())
+  name  String @unique
+  posts Post[] @relation("PostTags")
+}

@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "Openly",
+    "slug": "openly",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "openly",
+    "splash": { "image": "./assets/splash.png", "resizeMode": "contain", "backgroundColor": "#FAFDF7" },
+    "ios": { "supportsTablet": true, "bundleIdentifier": "com.openly.app" },
+    "android": { "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png", "backgroundColor": "#FAFDF7" }, "package": "com.openly.app" },
+    "plugins": ["expo-router", "expo-camera"]
+  }
+}
