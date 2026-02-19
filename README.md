@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/🌿-Eloquium-2D6A4F?style=for-the-badge&labelColor=FAFDF7" alt="Eloquium" />
+<img src="logos/Eloquium_Logo_Full.svg" alt="Eloquium — Where Ideas Take Root" width="400" />
 
-# Eloquium
+<br />
 
 **A calmer space for independent creators to blog, vlog, and host discussions.**
 
