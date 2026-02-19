@@ -7,7 +7,7 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "lint": "eslint src/",
-    "test": "vitest"
+    "test": "vitest --passWithNoTests"
   },
   "dependencies": {
     "fastify": "^4.26.0",
