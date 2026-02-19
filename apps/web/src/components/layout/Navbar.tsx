@@ -18,17 +18,15 @@ export default function Navbar(): React.ReactNode {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5">
-          <svg width="32" height="32" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <svg width="28" height="28" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="navBg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#2D6A4F"/><stop offset="100%" stopColor="#1B4332"/></linearGradient>
-              <linearGradient id="navLeaf" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#FFFFFF"/><stop offset="100%" stopColor="#E2E8D9"/></linearGradient>
+              <linearGradient id="navLeaf" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#2D6A4F"/><stop offset="100%" stopColor="#40916C"/></linearGradient>
               <linearGradient id="navGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#D4A017"/><stop offset="100%" stopColor="#E8B92F"/></linearGradient>
             </defs>
-            <rect width="200" height="200" rx="40" fill="url(#navBg)"/>
             <g transform="translate(100, 25)">
               <path d="M 0 150 C 0 150, -30 90, -20 50 C -10 10, 20 -5, 30 0 C 40 5, 35 25, 25 45 C 15 65, 5 70, 0 75 C 5 65, 15 45, 22 30 C 18 45, 8 65, 0 80" fill="url(#navLeaf)" opacity="0.95"/>
-              <path d="M 0 150 C 0 150, 30 90, 20 50 C 10 10, -20 -5, -30 0 C -40 5, -35 25, -25 45 C -15 65, -5 70, 0 75 C -5 65, -15 45, -22 30 C -18 45, -8 65, 0 80" fill="url(#navLeaf)" opacity="0.75"/>
-              <line x1="0" y1="0" x2="0" y2="145" stroke="rgba(255,255,255,0.3)" strokeWidth="2" strokeLinecap="round"/>
+              <path d="M 0 150 C 0 150, 30 90, 20 50 C 10 10, -20 -5, -30 0 C -40 5, -35 25, -25 45 C -15 65, -5 70, 0 75 C -5 65, -15 45, -22 30 C -18 45, -8 65, 0 80" fill="url(#navLeaf)" opacity="0.70"/>
+              <line x1="0" y1="0" x2="0" y2="145" stroke="#1B4332" strokeWidth="2" strokeLinecap="round" opacity="0.3"/>
               <circle cx="0" cy="155" r="6" fill="url(#navGold)"/>
             </g>
           </svg>
