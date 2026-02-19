@@ -3,9 +3,9 @@ services:
   postgres:
     image: postgres:16-alpine
     environment:
-      POSTGRES_USER: openly_user
+      POSTGRES_USER: eloquium_user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: openly
+      POSTGRES_DB: eloquium
     ports:
       - "5432:5432"
     volumes:
@@ -21,7 +21,7 @@ services:
     ports:
       - "7700:7700"
     environment:
-      MEILI_MASTER_KEY: openly-search-key
+      MEILI_MASTER_KEY: eloquium-search-key
 
 volumes:
   pgdata:

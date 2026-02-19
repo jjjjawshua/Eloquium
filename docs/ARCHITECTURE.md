@@ -2,7 +2,7 @@
 
 ## Overview
 
-Openly is a monorepo using Turborepo with three main layers:
+Eloquium is a monorepo using Turborepo with three main layers:
 
 ### Frontend (apps/)
 - **web**: Next.js 14 with App Router, Tailwind CSS

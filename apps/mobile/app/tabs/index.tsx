@@ -6,7 +6,7 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.container}>
       <ScrollView>
         <View style={styles.header}>
-          <Text style={styles.logo}>Openly</Text>
+          <Text style={styles.logo}>Eloquium</Text>
           <Text style={styles.greeting}>Good morning</Text>
           <Text style={styles.subtitle}>Here's what's trending today</Text>
         </View>

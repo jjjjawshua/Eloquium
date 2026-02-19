@@ -7,9 +7,31 @@
     "allowJs": true,
     "noEmit": true,
     "incremental": true,
-    "paths": { "@/*": ["./src/*"], "@openly/shared": ["../../packages/shared/src"], "@openly/ui": ["../../packages/ui/src"] },
-    "plugins": [{ "name": "next" }]
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@eloquium/shared": [
+        "../../packages/shared/src"
+      ],
+      "@eloquium/ui": [
+        "../../packages/ui/src"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

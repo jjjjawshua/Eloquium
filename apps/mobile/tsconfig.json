@@ -1,1 +1,1 @@
-{ "extends": "expo/tsconfig.base", "compilerOptions": { "strict": true, "paths": { "@openly/shared": ["../../packages/shared/src"], "@openly/ui": ["../../packages/ui/src"] } } }
+{ "extends": "expo/tsconfig.base", "compilerOptions": { "strict": true, "paths": { "@eloquium/shared": ["../../packages/shared/src"], "@eloquium/ui": ["../../packages/ui/src"] } } }

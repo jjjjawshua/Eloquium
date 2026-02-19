@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="leafGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D6A4F"/>
+      <stop offset="100%" style="stop-color:#40916C"/>
+    </linearGradient>
+    <linearGradient id="goldDot" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4A017"/>
+      <stop offset="100%" style="stop-color:#E8B92F"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Transparent background version for website navbar -->
+  <g transform="translate(100, 25)">
+    <!-- Right leaf -->
+    <path d="M 0 150 C 0 150, -30 90, -20 50 C -10 10, 20 -5, 30 0 C 40 5, 35 25, 25 45 C 15 65, 5 70, 0 75 C 5 65, 15 45, 22 30 C 18 45, 8 65, 0 80" 
+          fill="url(#leafGreen)" opacity="0.95"/>
+    <!-- Left leaf -->
+    <path d="M 0 150 C 0 150, 30 90, 20 50 C 10 10, -20 -5, -30 0 C -40 5, -35 25, -25 45 C -15 65, -5 70, 0 75 C -5 65, -15 45, -22 30 C -18 45, -8 65, 0 80" 
+          fill="url(#leafGreen)" opacity="0.70"/>
+    <!-- Center vein -->
+    <line x1="0" y1="0" x2="0" y2="145" stroke="#1B4332" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+    <!-- Golden dot -->
+    <circle cx="0" cy="155" r="6" fill="url(#goldDot)"/>
+  </g>
+</svg>

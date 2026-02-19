@@ -1,4 +1,4 @@
-export const APP_NAME = "Openly";
+export const APP_NAME = "Eloquium";
 export const MAX_VLOG_DURATION = 60;
 export const MAX_UPLOAD_SIZE = 100 * 1024 * 1024;
 export const MIN_TIP_AMOUNT = 50;

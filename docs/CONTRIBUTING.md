@@ -1,11 +1,11 @@
-# Contributing to Openly
+# Contributing to Eloquium
 
 Thanks for your interest in contributing!
 
 ## Getting Started
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/openly.git`
+2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/eloquium.git`
 3. Install dependencies: `pnpm install`
 4. Copy `.env.example` to `.env` and fill in values
 5. Start Docker services: `cd infrastructure/docker && docker-compose up -d`

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eloquium Logo Suite</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: #FAFDF7; color: #1B1B1B; }
+  
+  .header { text-align: center; padding: 60px 20px 40px; }
+  .header h1 { font-family: Georgia, serif; font-size: 28px; font-weight: normal; color: #1B1B1B; margin-bottom: 8px; }
+  .header p { font-size: 14px; color: #6B7280; }
+  
+  .grid { max-width: 1000px; margin: 0 auto; padding: 0 20px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  
+  .card { border: 1px solid #E2E8D9; border-radius: 20px; padding: 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 280px; position: relative; }
+  .card.light { background: #FFFFFF; }
+  .card.dark { background: #1B1B1B; }
+  .card.green { background: #2D6A4F; }
+  .card.yellow { background: #FEF9E7; }
+  .card.full { grid-column: 1 / -1; }
+  
+  .label { position: absolute; top: 16px; left: 20px; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
+  .label.dark-text { color: #6B7280; }
+  .label.light-text { color: rgba(255,255,255,0.5); }
+  
+  /* Full wordmark logo */
+  .logo-full { display: flex; align-items: center; gap: 16px; }
+  .logo-full .mark { width: 48px; height: 48px; }
+  .logo-full .wordmark { font-family: Georgia, serif; font-size: 38px; font-weight: normal; letter-spacing: 1px; }
+  .logo-full .tagline { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-top: 4px; }
+  
+  /* Icon only */
+  .logo-icon { width: 80px; height: 80px; }
+  .logo-icon.large { width: 100px; height: 100px; }
+  
+  /* App icon */
+  .app-icon { width: 100px; height: 100px; border-radius: 22px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
+  
+  /* Navbar preview */
+  .navbar-preview { width: 100%; background: #FAFDF7; border: 1px solid #E2E8D9; border-radius: 12px; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
+  .navbar-left { display: flex; align-items: center; gap: 10px; }
+  .navbar-left svg { width: 32px; height: 32px; }
+  .navbar-left span { font-family: Georgia, serif; font-size: 20px; font-weight: bold; }
+  .navbar-links { display: flex; gap: 16px; }
+  .navbar-links span { font-size: 13px; color: #6B7280; }
+  .navbar-btn { background: #2D6A4F; color: white; border: none; padding: 8px 18px; border-radius: 50px; font-size: 13px; font-weight: 600; font-family: 'DM Sans', sans-serif; }
+  
+  .section-title { text-align: center; padding: 40px 20px 20px; font-family: Georgia, serif; font-size: 22px; font-weight: normal; color: #1B1B1B; }
+  
+  .colors-row { max-width: 1000px; margin: 0 auto 60px; padding: 0 20px; display: flex; gap: 12px; }
+  .color-chip { flex: 1; height: 80px; border-radius: 12px; display: flex; align-items: flex-end; padding: 10px; font-size: 11px; font-weight: 600; letter-spacing: 1px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Eloquium — Logo Suite</h1>
+  <p>Brand identity system for the creator platform</p>
+</div>
+
+<div class="grid">
+
+  <!-- Full Logo on Light -->
+  <div class="card light full">
+    <span class="label dark-text">Primary Logo — Light Background</span>
+    <div class="logo-full">
+      <svg class="mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2D6A4F"/><stop offset="100%" stop-color="#40916C"/></linearGradient>
+          <linearGradient id="gd1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D4A017"/><stop offset="100%" stop-color="#E8B92F"/></linearGradient>
+        </defs>
+        <g transform="translate(100, 25)">
+          <path d="M 0 150 C 0 150, -30 90, -20 50 C -10 10, 20 -5, 30 0 C 40 5, 35 25, 25 45 C 15 65, 5 70, 0 75 C 5 65, 15 45, 22 30 C 18 45, 8 65, 0 80" fill="url(#lg1)" opacity="0.95"/>
+          <path d="M 0 150 C 0 150, 30 90, 20 50 C 10 10, -20 -5, -30 0 C -40 5, -35 25, -25 45 C -15 65, -5 70, 0 75 C -5 65, -15 45, -22 30 C -18 45, -8 65, 0 80" fill="url(#lg1)" opacity="0.70"/>
+          <line x1="0" y1="0" x2="0" y2="145" stroke="#1B4332" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+          <circle cx="0" cy="155" r="6" fill="url(#gd1)"/>
+        </g>
+      </svg>
+      <div>
+        <div class="wordmark" style="color: #1B1B1B;">Eloquium</div>
+        <div class="tagline" style="color: #6B7280;">Where ideas take root</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Icon on White -->
+  <div class="card light">
+    <span class="label dark-text">Icon — Light</span>
+    <svg class="logo-icon large" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2D6A4F"/><stop offset="100%" stop-color="#40916C"/></linearGradient>
+        <linearGradient id="gd2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D4A017"/><stop offset="100%" stop-color="#E8B92F"/></linearGradient>
+      </defs>
+      <g transform="translate(100, 25)">
+        <path d="M 0 150 C 0 150, -30 90, -20 50 C -10 10, 20 -5, 30 0 C 40 5, 35 25, 25 45 C 15 65, 5 70, 0 75 C 5 65, 15 45, 22 30 C 18 45, 8 65, 0 80" fill="url(#lg2)" opacity="0.95"/>
+        <path d="M 0 150 C 0 150, 30 90, 20 50 C 10 10, -20 -5, -30 0 C -40 5, -35 25, -25 45 C -15 65, -5 70, 0 75 C -5 65, -15 45, -22 30 C -18 45, -8 65, 0 80" fill="url(#lg2)" opacity="0.70"/>
+        <line x1="0" y1="0" x2="0" y2="145" stroke="#1B4332" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+        <circle cx="0" cy="155" r="6" fill="url(#gd2)"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- App Icon -->
+  <div class="card light">
+    <span class="label dark-text">App Icon</span>
+    <div class="app-icon">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2D6A4F"/><stop offset="100%" stop-color="#1B4332"/></linearGradient>
+          <linearGradient id="lf3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#E2E8D9"/></linearGradient>
+          <linearGradient id="gd3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D4A017"/><stop offset="100%" stop-color="#E8B92F"/></linearGradient>
+        </defs>
+        <rect width="200" height="200" rx="40" fill="url(#bg3)"/>
+        <g transform="translate(100, 25)">
+          <path d="M 0 150 C 0 150, -30 90, -20 50 C -10 10, 20 -5, 30 0 C 40 5, 35 25, 25 45 C 15 65, 5 70, 0 75 C 5 65, 15 45, 22 30 C 18 45, 8 65, 0 80" fill="url(#lf3)" opacity="0.95"/>
+          <path d="M 0 150 C 0 150, 30 90, 20 50 C 10 10, -20 -5, -30 0 C -40 5, -35 25, -25 45 C -15 65, -5 70, 0 75 C -5 65, -15 45, -22 30 C -18 45, -8 65, 0 80" fill="url(#lf3)" opacity="0.75"/>
+          <line x1="0" y1="0" x2="0" y2="145" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="0" cy="155" r="6" fill="url(#gd3)"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Dark background -->
+  <div class="card dark">
+    <span class="label light-text">Logo — Dark Background</span>
+    <div class="logo-full">
+      <svg class="mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lg4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#40916C"/><stop offset="100%" stop-color="#74A67A"/></linearGradient>
+          <linearGradient id="gd4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D4A017"/><stop offset="100%" stop-color="#E8B92F"/></linearGradient>
+        </defs>
+        <g transform="translate(100, 25)">
+          <path d="M 0 150 C 0 150, -30 90, -20 50 C -10 10, 20 -5, 30 0 C 40 5, 35 25, 25 45 C 15 65, 5 70, 0 75 C 5 65, 15 45, 22 30 C 18 45, 8 65, 0 80" fill="url(#lg4)" opacity="0.95"/>
+          <path d="M 0 150 C 0 150, 30 90, 20 50 C 10 10, -20 -5, -30 0 C -40 5, -35 25, -25 45 C -15 65, -5 70, 0 75 C -5 65, -15 45, -22 30 C -18 45, -8 65, 0 80" fill="url(#lg4)" opacity="0.70"/>
+          <line x1="0" y1="0" x2="0" y2="145" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="0" cy="155" r="6" fill="url(#gd4)"/>
+        </g>
+      </svg>
+      <div>
+        <div class="wordmark" style="color: #FFFFFF;">Eloquium</div>
+        <div class="tagline" style="color: rgba(255,255,255,0.5);">Where ideas take root</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Green background -->
+  <div class="card green">
+    <span class="label light-text">Logo — Brand Green</span>
+    <div class="logo-full">
+      <svg class="mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lf5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#E2E8D9"/></linearGradient>
+          <linearGradient id="gd5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D4A017"/><stop offset="100%" stop-color="#E8B92F"/></linearGradient>
+        </defs>
+        <g transform="translate(100, 25)">
+          <path d="M 0 150 C 0 150, -30 90, -20 50 C -10 10, 20 -5, 30 0 C 40 5, 35 25, 25 45 C 15 65, 5 70, 0 75 C 5 65, 15 45, 22 30 C 18 45, 8 65, 0 80" fill="url(#lf5)" opacity="0.95"/>
+          <path d="M 0 150 C 0 150, 30 90, 20 50 C 10 10, -20 -5, -30 0 C -40 5, -35 25, -25 45 C -15 65, -5 70, 0 75 C -5 65, -15 45, -22 30 C -18 45, -8 65, 0 80" fill="url(#lf5)" opacity="0.75"/>
+          <line x1="0" y1="0" x2="0" y2="145" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="0" cy="155" r="6" fill="url(#gd5)"/>
+        </g>
+      </svg>
+      <div>
+        <div class="wordmark" style="color: #FFFFFF;">Eloquium</div>
+        <div class="tagline" style="color: rgba(255,255,255,0.6);">Where ideas take root</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar Preview -->
+  <div class="card light full" style="padding: 40px 30px;">
+    <span class="label dark-text">In-Context — Navbar</span>
+    <div class="navbar-preview">
+      <div class="navbar-left">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:32px;height:32px;">
+          <defs>
+            <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2D6A4F"/><stop offset="100%" stop-color="#1B4332"/></linearGradient>
+            <linearGradient id="lf6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#E2E8D9"/></linearGradient>
+            <linearGradient id="gd6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D4A017"/><stop offset="100%" stop-color="#E8B92F"/></linearGradient>
+          </defs>
+          <rect width="200" height="200" rx="40" fill="url(#bg6)"/>
+          <g transform="translate(100, 25)">
+            <path d="M 0 150 C 0 150, -30 90, -20 50 C -10 10, 20 -5, 30 0 C 40 5, 35 25, 25 45 C 15 65, 5 70, 0 75 C 5 65, 15 45, 22 30 C 18 45, 8 65, 0 80" fill="url(#lf6)" opacity="0.95"/>
+            <path d="M 0 150 C 0 150, 30 90, 20 50 C 10 10, -20 -5, -30 0 C -40 5, -35 25, -25 45 C -15 65, -5 70, 0 75 C -5 65, -15 45, -22 30 C -18 45, -8 65, 0 80" fill="url(#lf6)" opacity="0.75"/>
+            <line x1="0" y1="0" x2="0" y2="145" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="0" cy="155" r="6" fill="url(#gd6)"/>
+          </g>
+        </svg>
+        <span>Eloquium</span>
+      </div>
+      <div class="navbar-links">
+        <span>Explore</span>
+        <span>Discussions</span>
+        <span>Pricing</span>
+      </div>
+      <button class="navbar-btn">Start Writing</button>
+    </div>
+  </div>
+
+</div>
+
+<h2 class="section-title">Brand Colors</h2>
+<div class="colors-row">
+  <div class="color-chip" style="background:#2D6A4F; color:white;">Accent<br>#2D6A4F</div>
+  <div class="color-chip" style="background:#40916C; color:white;">Light<br>#40916C</div>
+  <div class="color-chip" style="background:#1B1B1B; color:white;">Dark<br>#1B1B1B</div>
+  <div class="color-chip" style="background:#D4A017; color:white;">Gold<br>#D4A017</div>
+  <div class="color-chip" style="background:#FAFDF7; color:#6B7280; border:1px solid #E2E8D9;">BG<br>#FAFDF7</div>
+  <div class="color-chip" style="background:#E2E8D9; color:#6B7280;">Border<br>#E2E8D9</div>
+</div>
+
+</body>
+</html>

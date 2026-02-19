@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "Openly",
-    "slug": "openly",
+    "name": "Eloquium",
+    "slug": "eloquium",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "scheme": "openly",
+    "scheme": "eloquium",
     "splash": { "image": "./assets/splash.png", "resizeMode": "contain", "backgroundColor": "#FAFDF7" },
-    "ios": { "supportsTablet": true, "bundleIdentifier": "com.openly.app" },
-    "android": { "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png", "backgroundColor": "#FAFDF7" }, "package": "com.openly.app" },
+    "ios": { "supportsTablet": true, "bundleIdentifier": "com.eloquium.app" },
+    "android": { "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png", "backgroundColor": "#FAFDF7" }, "package": "com.eloquium.app" },
     "plugins": ["expo-router", "expo-camera"]
   }
 }

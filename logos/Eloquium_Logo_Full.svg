@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D6A4F"/>
+      <stop offset="100%" style="stop-color:#40916C"/>
+    </linearGradient>
+    <linearGradient id="dotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4A017"/>
+      <stop offset="100%" style="stop-color:#E8B92F"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo Mark: Abstract quill/leaf shape -->
+  <g transform="translate(40, 20)">
+    <!-- Main leaf/quill shape -->
+    <path d="M 50 160 C 50 160, 20 100, 30 60 C 40 20, 70 5, 80 10 C 90 15, 85 35, 75 55 C 65 75, 55 80, 50 85 C 55 75, 65 55, 72 40 C 68 55, 58 75, 50 90" 
+          fill="url(#leafGrad)" opacity="0.9"/>
+    <path d="M 50 160 C 50 160, 80 100, 70 60 C 60 20, 30 5, 20 10 C 10 15, 15 35, 25 55 C 35 75, 45 80, 50 85 C 45 75, 35 55, 28 40 C 32 55, 42 75, 50 90" 
+          fill="url(#leafGrad)" opacity="0.7"/>
+    <!-- Center vein / pen line -->
+    <line x1="50" y1="10" x2="50" y2="155" stroke="#1B4332" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    <!-- Golden dot accent -->
+    <circle cx="50" cy="165" r="5" fill="url(#dotGrad)"/>
+  </g>
+  
+  <!-- Wordmark -->
+  <text x="150" y="125" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="normal" fill="#1B1B1B" letter-spacing="3">
+    Eloquium
+  </text>
+  
+  <!-- Tagline -->
+  <text x="153" y="155" font-family="'DM Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#6B7280" letter-spacing="4" text-transform="uppercase">
+    WHERE IDEAS TAKE ROOT
+  </text>
+</svg>
