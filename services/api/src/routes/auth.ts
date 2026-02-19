@@ -1,13 +1,12 @@
 import { FastifyPluginAsync } from "fastify";
-import { prisma } from "../index";
 
 const authRoutes: FastifyPluginAsync = async (app) => {
-  app.post("/register", async (request, reply) => {
+  app.post("/register", async (_request, _reply) => {
     // TODO: Implement registration with bcrypt + JWT
     return { message: "Registration endpoint - implement with bcrypt + JWT" };
   });
 
-  app.post("/login", async (request, reply) => {
+  app.post("/login", async (_request, _reply) => {
     // TODO: Implement login
     return { message: "Login endpoint - implement with bcrypt + JWT" };
   });

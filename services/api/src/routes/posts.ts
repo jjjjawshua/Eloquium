@@ -3,8 +3,8 @@ import { prisma } from "../index";
 
 const postRoutes: FastifyPluginAsync = async (app) => {
   // Get all published posts (paginated)
-  app.get("/", async (request, reply) => {
-    const { page = 1, limit = 20 } = request.query as any;
+  app.get("/", async (request, _reply) => {
+    const { page = 1, limit = 20 } = request.query as Record<string, string>;
     const posts = await prisma.post.findMany({
       where: { published: true },
       include: { author: { select: { name: true, username: true, avatar: true } }, tags: true },
@@ -16,8 +16,8 @@ const postRoutes: FastifyPluginAsync = async (app) => {
   });
 
   // Get single post by slug
-  app.get("/:username/:slug", async (request, reply) => {
-    const { username, slug } = request.params as any;
+  app.get("/:username/:slug", async (request, _reply) => {
+    const { username, slug } = request.params as Record<string, string>;
     const post = await prisma.post.findFirst({
       where: { slug, author: { username }, published: true },
       include: {
@@ -32,7 +32,7 @@ const postRoutes: FastifyPluginAsync = async (app) => {
   });
 
   // Create post (authenticated)
-  app.post("/", async (request, reply) => {
+  app.post("/", async (_request, _reply) => {
     // TODO: Add auth middleware
     return { message: "Create post endpoint - add auth middleware" };
   });

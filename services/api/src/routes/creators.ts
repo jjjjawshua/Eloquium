@@ -2,8 +2,8 @@ import { FastifyPluginAsync } from "fastify";
 import { prisma } from "../index";
 
 const creatorRoutes: FastifyPluginAsync = async (app) => {
-  app.get("/:username", async (request, reply) => {
-    const { username } = request.params as any;
+  app.get("/:username", async (request, _reply) => {
+    const { username } = request.params as Record<string, string>;
     const creator = await prisma.user.findUnique({
       where: { username },
       select: {
@@ -16,8 +16,8 @@ const creatorRoutes: FastifyPluginAsync = async (app) => {
     return creator;
   });
 
-  app.get("/", async (request, reply) => {
-    const { topic, sort = "subscribers" } = request.query as any;
+  app.get("/", async (request, _reply) => {
+    const { topic: _topic, sort: _sort = "subscribers" } = request.query as Record<string, string>;
     const creators = await prisma.user.findMany({
       where: { posts: { some: { published: true } } },
       select: {
